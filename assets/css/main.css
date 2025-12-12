@@ -4,6 +4,7 @@
 	Eventually by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -777,9 +778,13 @@ button,
       padding: 0; } }
 
 /* Header */
-#header h1 {
-  font-size: 3.25em;
-  margin: 0 0 0.55em 0; }
+#header #logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 200px;
+  height: auto;
+}
+
 
 #header p {
   font-size: 1.35em;
@@ -789,10 +794,10 @@ button,
   color: inherit; }
 
 @media screen and (max-width: 736px) {
-  #header h1 {
-    font-size: 2em; }
-  #header p {
-    font-size: 1em; } }
+  #header #logo {
+    max-width: 150px;
+  }
+}
 
 @media screen and (max-width: 480px) {
   #header {
