@@ -779,12 +779,14 @@ button,
 
 /* Header */
 #header #logo {
-  display: block;
-  margin: 0 0 20px 0;
-  margin-left: 20px; /* adjust spacing from left edge */
-  max-width: 200px;
-  height: auto;
+    display: block;
+    margin: 0 0 20px 0; /* spacing below logo */
+    max-width: 200px;   /* adjust as needed */
+    height: auto;
+    position: relative;
+    top: -2in;           /* moves logo up by 2 inches */
 }
+
 
 
 #header p {
@@ -891,4 +893,5 @@ button,
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
+
 
