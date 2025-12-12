@@ -355,27 +355,12 @@ hr {
 section.special, article.special {
   text-align: center; }
 
-header p {
-  color: rgba(255, 255, 255, 0.5);
-  position: relative;
-  margin: 0 0 1.5em 0; }
-
-header h2 + p {
-  font-size: 1.25em;
-  margin-top: -1em;
-  line-height: 1.5em; }
-
-header h3 + p {
-  font-size: 1.1em;
-  margin-top: -0.8em;
-  line-height: 1.5em; }
-
-header h4 + p,
-header h5 + p,
-header h6 + p {
-  font-size: 0.9em;
-  margin-top: -0.6em;
-  line-height: 1.5em; }
+/* Header container */
+#header .header-content {
+    display: flex;
+    align-items: flex-start; /* aligns logo and text at top */
+    gap: 20px;               /* space between logo and text */
+}
 
 @media screen and (max-width: 980px) {
   header br {
@@ -779,43 +764,41 @@ button,
 
 /* Header */
 #header #logo {
-    display: block;
-    position: relative;
-    max-width: 200px;       /* adjust size as needed */
+    max-width: 200px;       /* adjust size */
     height: auto;
-    margin: 0 0 20px 0;     /* spacing below logo */
-    top: -2in;              /* moves logo up */
+    margin: 0;
 }
 
-#header p {
-  font-size: 1.35em;
-  line-height: 1.65em; }
+#header .header-content p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.35em;
+    line-height: 1.65em;
+    margin: 0;
+    flex: 1;                /* text takes remaining space */
+}
 
 #header a {
   color: inherit; }
 
 /* Responsive adjustments */
 @media screen and (max-width: 1280px) {
-    #header #logo {
-        max-width: 180px;
-        top: -1.5in;
-    }
+    #header #logo { max-width: 180px; }
+    #header .header-content p { font-size: 1.2em; }
 }
 
 @media screen and (max-width: 736px) {
-    #header #logo {
-        max-width: 150px;
-        top: -1in;
-        margin-left: 10px;  /* small left indent for mobile */
+    #header .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;  /* smaller spacing for mobile */
     }
+    #header #logo { max-width: 150px; }
+    #header .header-content p { font-size: 1em; }
 }
 
 @media screen and (max-width: 480px) {
-    #header #logo {
-        max-width: 120px;
-        top: -0.8in;
-        margin-left: 10px;
-    }
+    #header #logo { max-width: 120px; }
+    #header .header-content p { font-size: 0.9em; }
 }
 
 @media screen and (max-width: 480px) {
@@ -909,6 +892,7 @@ button,
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
+
 
 
 
