@@ -780,7 +780,8 @@ button,
 /* Header */
 #header #logo {
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 0 0 20px 0;
+  margin-left: 20px; /* adjust spacing from left edge */
   max-width: 200px;
   height: auto;
 }
@@ -890,3 +891,4 @@ button,
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
+
